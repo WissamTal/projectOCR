@@ -37,27 +37,6 @@ class BibliographieController extends AbstractController
     }
 
     /**
-     * @Route("/", name="app_bibliographie_new", methods={"GET", "POST"})
-     */
-    public function new(Request $request, BibliographieRepository $bibliographieRepository): Response
-    {
-        $bibliographie = new Bibliographie();
-        $form = $this->createForm(BibliographieType::class, $bibliographie);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $bibliographieRepository->add($bibliographie, true);
-
-            return $this->redirectToRoute('app_bibliographie_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('bibliographie/index.html.twig', [
-            'bibliographie' => $bibliographie,
-            'form' => $form,
-        ]);
-    }
-
-    /**
      * @Route("/{id}", name="app_bibliographie_show", methods={"GET"})
      */
     public function show(Bibliographie $bibliographie): Response
