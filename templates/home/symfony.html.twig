@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Symfony {% endblock %}
+
+{% block body %}
+
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+    <div class="example-wrapper">
+        <h1>Hello Symfony </h1>
+        <p> Symfony est un framework qui représente un ensemble de composants (aussi appelés librairies) PHP qui peuvent être utilisés dans des projets web. Il est basé sur l'architecture MVC (modèle-vue-contrôleur). Le framework a été créé par une agence Francaise SensioLabs. La dernière version est la 6,0. </p>
+        <a href="{{ path('app_mvc') }}"> <button type="button" class="btn btn-secondary"> En savoir plus sur l'architecture MVC </button></a>
+
+        <a href="{{ path('app_home') }}">back</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Http{% endblock %}
+
+{% block body %}
+
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+    <div class="example-wrapper">
+        <h1>Hello HTTP </h1>
+           <p> L'http, pour Hypertext Transfer Protocol, désigne dans le langage informatique un protocole de communication entre un client et un serveur pour le World Wide Web. On le traduit littéralement en français par protocole de transfert hypertexte.
+            Inventé dans les années 1990 par Tim Berners-Lee, le protocole http établit une liaison entre un ordinateur (client) et un serveur Web. La version 1.0 du protocole (la plus utilisée) permet désormais de transférer des messages avec des en-têtes décrivant le contenu du message en utilisant un codage de type MIME.
+               Le but du protocole HTTP est de permettre un transfert de fichiers (essentiellement au format <a href="{{ path('app_html') }}" data-toggle="tooltip" data-placement="right" title="En savoir plus"> HTML </a>) localisés grâce à une chaîne de caractères appelée URL entre un navigateur (le client) et un serveur Web.</p>
+        <img src="https://img-19.ccm2.net/q1_lqTcNUtYc3W0d3SYPwb-Lrk8=/377x/bfbd92d7cd9443e38170cde13721391b/ccm-encyclopedia/internet-images-comm.gif">
+
+        <div>
+            <a href="{{ path('app_home') }}"> <button type="button" class="btn btn-info"> back </button></a>
+        </div>
+    </div>
+
+{% endblock %}

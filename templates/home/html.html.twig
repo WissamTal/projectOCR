@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Html{% endblock %}
+
+{% block body %}
+
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+    <div class="example-wrapper">
+        <h1>Hello HTML </h1>
+
+        <p>
+            HTML signifie "HyperText Markup Language". C’est un langage qui permet de composer des pages web. On parle de langage de balisage et non de langage de programmation, car le but du HTML est d’encadrer les différents éléments présents dans une page (images, titres, paragraphes ...) par des balises pour leur permettre d’être mis en forme secondairement (via une feuille de style, CSS) et pour leur donner du sens.
+        </p>
+        <div>
+            <a href="{{ path('app_http') }}"> <button type="button" class="btn btn-info"> back </button></a>
+        </div>
+    </div>
+
+{% endblock %}

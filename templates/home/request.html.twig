@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} CSS {% endblock %}
+
+{% block body %}
+
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+    <div class="example-wrapper">
+        <h1>Hello Requête-Réponse</h1>
+<H2> Requêtes </H2>
+        <p>
+            Il existe plusieurs méthodes de requêtes HTTP dont:
+        </p>
+        <ul>
+            <li> GET : cette méthode permet la récuperation de données</li>
+            <li> POST : cette méthode permet d'ajouter des données sur le serveur </li>
+            <li> PUT : cette méthode permet de modifier des données </li>
+            <li> DELETE : cette méthode permet la suppression des données </li>
+        </ul>
+<H2> Réponse </H2>
+        <p> Une réponse HTTP est un ensemble de lignes envoyées au navigateur par le serveur. Elle comprend : </p>
+        <ul>
+            <li> Une ligne de statut avec la version du protocol utilisé, <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" target="_blank" data-toggle="tooltip" data-placement="right" title="En savoir plus"> le code de status </a>, la signification du code</li>
+            <li> Les champs d'en-tête de la réponse </li>
+            <li> Le corps de la réponse </li>
+        </ul>
+        <a href="{{ path('app_home') }}">back</a>
+    </div>
+
+{% endblock %}

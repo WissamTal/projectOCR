@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bibliographie index{% endblock %}
+
+{% block body %}
+
+    <h1>Bibliographie index</h1>
+
+    <div>
+        <h2>Create new Bibliographie</h2>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn">{{ button_label|default('Save') }}</button>
+        {{ form_end(form) }}
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Url</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bibliographie in bibliographies %}
+            <tr>
+                <td>{{ bibliographie.id }}</td>
+                <td>{{ bibliographie.name }}</td>
+                <td><a href="{{ bibliographie.url }}">{{ bibliographie.url }}</a></td>
+                <td>
+                    <a href="{{ path('app_bibliographie_show', {'id': bibliographie.id}) }}">show</a>
+                    <a href="{{ path('app_bibliographie_edit', {'id': bibliographie.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
