@@ -5,7 +5,7 @@
 {% block body %}
 
     <h1>Bibliographie index</h1>
-
+   {% if is_granted('ROLE_ADMIN') %}
     <div>
         <h2>Create new Bibliographie</h2>
         {{ form_start(form) }}
@@ -13,6 +13,9 @@
         <button class="btn">{{ button_label|default('Save') }}</button>
         {{ form_end(form) }}
     </div>
+{% else %}
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4LAv7vICp7RHIrWd0wNanjmWxc55AcIjb5MuL7isIUHv7f66aR5CIQn4l32ksl8jZ63E&usqp=CAU" alt="" style="margin-bottom: 15px">
+    {% endif %}
 
     <table class="table">
         <thead>
