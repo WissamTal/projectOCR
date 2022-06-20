@@ -87,8 +87,7 @@
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "compile":
-                "bin/console doctrine:migrations:migrate"
+            "compile": "bin/console doctrine:migrations:migrate"
         },
         "post-install-cmd": [
             "@auto-scripts"
