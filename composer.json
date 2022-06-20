@@ -85,7 +85,7 @@
     },
     "scripts": {
         "compile": [
-            "bin/console doctrine:migrations:migrate"
+            "bin/console doctrine:schema:update --force"
         ],
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
