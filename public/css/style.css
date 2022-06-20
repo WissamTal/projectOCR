@@ -9,6 +9,7 @@ body {
     background-color: black;
     color: white;
 }
+
 .example-wrapper
 {
     border: solid;
@@ -16,4 +17,11 @@ body {
 }
 h1 {
     text-align: center;
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 60%;
+
 }

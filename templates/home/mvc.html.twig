@@ -10,9 +10,13 @@
     </style>
     <div class="example-wrapper">
         <h1>Hello MVC </h1>
-        <p> </p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Mod%C3%A8le-vue-contr%C3%B4leur_%28MVC%29_-_fr.png/370px-Mod%C3%A8le-vue-contr%C3%B4leur_%28MVC%29_-_fr.png" alt="" >
-        <a href="{{ path('app_symfony') }}"> back </a>
+        <p> Le modèle MVC (modèle-vue-contrôleur) est une architecture logicielle. La structuration d'un projet se compose en 3 modules comme afficher sur le schéma ci-dessous: </p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Mod%C3%A8le-vue-contr%C3%B4leur_%28MVC%29_-_fr.png/370px-Mod%C3%A8le-vue-contr%C3%B4leur_%28MVC%29_-_fr.png" alt="" class="img-center">
+        <p> Le modèle est le composant qui va gérer l'interaction avec la base de donnée (l'insertion, la modification, la récupération et la suppression de la donnée).</p>
+        <p> La vue est le composant qui va gérer l'affichage dans l'application.</p>
+        <p> Le contrôleur est le composant qui va gérer la connexion entre le modèle et la vue.</p>
+       <div><a href="{{ path('app_symfony') }}" class="btn btn-info"> back </a> </div>
+
     </div>
 
 {% endblock %}
