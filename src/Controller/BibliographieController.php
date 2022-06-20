@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BibliographieController extends AbstractController
 {
     /**
-     * @Route("/", name="app_bibliographie_index", methods={"GET"})
+     * @Route("/", name="app_bibliographie_index", methods={"GET", "POST"})
      */
     public function index(Request $request, BibliographieRepository $bibliographieRepository): Response
     {
