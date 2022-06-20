@@ -1,12 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %} Index {% endblock %}
 
 {% block body %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    </style>
+
     <h1>Hello World</h1>
     <div class="example-wrapper">
         <p> Rien que pour afficher cette page, vous avez déjà effectué ce que l'on appelle un cycle <a href="{{ path('app_request') }}" data-toggle="tooltip" data-placement="right" title="En savoir plus"> Requête - Réponse </a>. C'est-à-dire que vous avez envoyé depuis votre navigateur une requête utilisant le protocole HTTP qui est parvenue jusqu'à notre serveur. Notre serveur a traité la requête et produit une réponse que vous êtes en train de lire, cette page web. <strong> Ce cycle Requête - Réponse est le cœur du paradigme de développement web </strong>. Une application dite web n'est autre qu'une machine à résoudre et répondre aux requêtes qu'elle reçoit. Le langage de programmation utilisé pour créer cette application est <strong> Php </strong>. Le framework utilisé est <strong>Symfony</strong>. Le style et les animations sont gérés par le <strong>CSS (framework Bootstrap) et JavaScript</strong>.<br>
