@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Bibliographie;
 use App\Form\BibliographieType;
 use App\Repository\BibliographieRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -38,6 +39,7 @@ class BibliographieController extends AbstractController
 
     /**
      * @Route("/{id}", name="app_bibliographie_show", methods={"GET"})
+     * @Security("is_granted('ROLE_ADMIN')")
      */
     public function show(Bibliographie $bibliographie): Response
     {
@@ -48,6 +50,7 @@ class BibliographieController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="app_bibliographie_edit", methods={"GET", "POST"})
+     * @Security("is_granted('ROLE_ADMIN')")
      */
     public function edit(Request $request, Bibliographie $bibliographie, BibliographieRepository $bibliographieRepository): Response
     {
@@ -68,6 +71,7 @@ class BibliographieController extends AbstractController
 
     /**
      * @Route("/{id}", name="app_bibliographie_delete", methods={"POST"})
+     * @Security("is_granted('ROLE_ADMIN')")
      */
     public function delete(Request $request, Bibliographie $bibliographie, BibliographieRepository $bibliographieRepository): Response
     {

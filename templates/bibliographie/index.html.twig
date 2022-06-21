@@ -20,22 +20,25 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+
                 <th>Name</th>
                 <th>Url</th>
+                {% if is_granted('ROLE_ADMIN') %}
                 <th>actions</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
         {% for bibliographie in bibliographies %}
             <tr>
-                <td>{{ bibliographie.id }}</td>
                 <td>{{ bibliographie.name }}</td>
                 <td><a href="{{ bibliographie.url }}">{{ bibliographie.url }}</a></td>
+                {% if is_granted('ROLE_ADMIN') %}
                 <td>
                     <a href="{{ path('app_bibliographie_show', {'id': bibliographie.id}) }}">show</a>
                     <a href="{{ path('app_bibliographie_edit', {'id': bibliographie.id}) }}">edit</a>
                 </td>
+                {% endif %}
             </tr>
         {% else %}
             <tr>
